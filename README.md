@@ -42,11 +42,11 @@ And then in my MainActivity on Android :
  ```
     
 And then in AppDelegate in iOS : 
-    ```C#
+```C#
         App.DisplayScreenWidth = (double)UIScreen.MainScreen.Bounds.Width;
         App.DisplayScreenHeight = (double)UIScreen.MainScreen.Bounds.Height;
         App.DisplayScaleFactor = (double)UIScreen.MainScreen.Scale;
-    ```
+```
 
 And then in my code behind for my DialPad (DialPadPage.xaml.cs) I call a function when the page appears to scale the UI and do a bit of coding.
 ```C#              
