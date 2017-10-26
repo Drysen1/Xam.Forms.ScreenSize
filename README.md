@@ -35,22 +35,21 @@ There are probably a bunch of different ways of achieving this and this is just 
         public static double DisplayScaleFactor = 0f; 
 ```
 And then in my MainActivity on Android :     
-
-   ```C#
+ ```C#
         App.DisplayScreenWidth = (double)Resources.DisplayMetrics.WidthPixels / (double)Resources.DisplayMetrics.Density;
         App.DisplayScreenHeight = (double)Resources.DisplayMetrics.HeightPixels / (double)Resources.DisplayMetrics.Density;
         App.DisplayScaleFactor = (double)Resources.DisplayMetrics.Density;
-    ```
+ ```
     
-      And then in AppDelegate in iOS : 
+And then in AppDelegate in iOS : 
     ```C#
         App.DisplayScreenWidth = (double)UIScreen.MainScreen.Bounds.Width;
         App.DisplayScreenHeight = (double)UIScreen.MainScreen.Bounds.Height;
         App.DisplayScaleFactor = (double)UIScreen.MainScreen.Scale;
     ```
 
-      And then in my code behind for my DialPad (DialPadPage.xaml.cs) I call a function when the page appears to scale the UI and do a bit of coding.
-    ```C#              
+And then in my code behind for my DialPad (DialPadPage.xaml.cs) I call a function when the page appears to scale the UI and do a bit of coding.
+```C#              
         private void ScaleUI()
         {
             CreateButtons();
@@ -86,9 +85,9 @@ And then in my MainActivity on Android :
                 }
             }
         }
-      ```    
+```    
 
     
       
-      Now some might say that there should be no code in the code behind when implementing MVVM, but since the code located there is affecting the UI I personally believe it is ok.
+Now some might say that there should be no code in the code behind when implementing MVVM, but since the code located there is affecting the UI I personally believe it is ok.
       
