@@ -29,13 +29,12 @@ There are probably a bunch of different ways of achieving this and this is just 
   
   2/3. What I did to get the screensize was to in my app.xaml.cs add these 3 properties: 
 
-   ```C#
+```C#
         public static double DisplayScreenWidth = 0f;
         public static double DisplayScreenHeight = 0f;
-        public static double DisplayScaleFactor = 0f;
-    ```
-
-      And then in my MainActivity on Android :     
+        public static double DisplayScaleFactor = 0f; 
+```
+And then in my MainActivity on Android :     
 
    ```C#
         App.DisplayScreenWidth = (double)Resources.DisplayMetrics.WidthPixels / (double)Resources.DisplayMetrics.Density;
@@ -87,7 +86,9 @@ There are probably a bunch of different ways of achieving this and this is just 
                 }
             }
         }
-      ```        
+      ```    
+
+    
       
       Now some might say that there should be no code in the code behind when implementing MVVM, but since the code located there is affecting the UI I personally believe it is ok.
       
