@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DialPad.Views.DialPadPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid x:Name="dialGrid" 
+              BackgroundColor="White"
+              Padding="0,0,0,0"
+              VerticalOptions="CenterAndExpand"            
+              RowSpacing="10"
+              ColumnSpacing="10">
+
+            <!-- Rowdefintions -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <!-- Columndefinitions -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="{Binding PhoneNumber}"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="EndAndExpand"
+                   TextColor="Black"
+                   FontSize="28"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="3"/>
+            <Button Text="Delete"
+                    Command="{Binding DeleteCmd}"
+                    TextColor="Black"
+                    BackgroundColor="Red"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"/>
+        </Grid>
+
+
+
+    </ContentPage.Content>
+</ContentPage>
